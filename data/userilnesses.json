@@ -1,37 +1,37 @@
 [
     {
-        "IlnessesId": 2,
+        "IllnessId": 2,
         "UserId": 1,
-        "symptoms": null
+        "symptom": null
     },
     {
-        "IlnessesId": 1,
+        "IllnessId": 1,
         "UserId": 3,
-        "symptoms": null
+        "symptom": null
     },
     {
-        "IlnessesId": 3,
+        "IllnessId": 3,
         "UserId": 4,
-        "symptoms": null
+        "symptom": null
     },
     {
-        "IlnessesId": 1,
+        "IllnessId": 1,
         "UserId": 2,
-        "symptoms": null
+        "symptom": null
     },
     {
-        "IlnessesId": 5,
+        "IllnessId": 5,
         "UserId": 5,
-        "symptoms": null
+        "symptom": null
     },
     {
-        "IlnessesId": 4,
+        "IllnessId": 4,
         "UserId": 1,
-        "symptoms": null
+        "symptom": null
     },
     {
-        "IlnessesId": 4,
+        "IllnessId": 4,
         "UserId": 2,
-        "symptoms": null
+        "symptom": null
     }
 ]
