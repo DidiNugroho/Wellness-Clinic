@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Migrain",
+        "description": "Gejala utama migrain adalah nyeri kepala hebat di salah satu sisi kepala. Nyeri yang dirasakan umumnya nyeri berdenyut dengan intensitas sedang hingga berat yang makin terasa ketika bergerak, melihat cahaya terang, atau mendengar suara bising."
+    },
+    {
+        "name": "Influenza",
+        "description": "Flu atau influenza merupakan penyakit yang disebabkan oleh infeksi virus yang dapat menyerang hidung, tenggorokan, dan paru-paru."
+    },
+    {
+        "name": "Kangker",
+        "description": "Kanker merupakan penyebab kematian kedua terbanyak di seluruh dunia. Kanker sering menyebabkan kematian, karena penyakit ini umumnya tidak menimbulkan gejala pada awal perkembangannya. Akibatnya, kondisi ini baru terdeteksi dan ditangani setelah mencapai stadium lanjut."
+    }
+]

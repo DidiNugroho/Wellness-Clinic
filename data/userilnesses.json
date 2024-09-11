@@ -1,0 +1,37 @@
+[
+    {
+        "IlnessesId": 2,
+        "UserId": 1,
+        "symptoms": null
+    },
+    {
+        "IlnessesId": 1,
+        "UserId": 3,
+        "symptoms": null
+    },
+    {
+        "IlnessesId": 3,
+        "UserId": 4,
+        "symptoms": null
+    },
+    {
+        "IlnessesId": 1,
+        "UserId": 2,
+        "symptoms": null
+    },
+    {
+        "IlnessesId": 5,
+        "UserId": 5,
+        "symptoms": null
+    },
+    {
+        "IlnessesId": 4,
+        "UserId": 1,
+        "symptoms": null
+    },
+    {
+        "IlnessesId": 4,
+        "UserId": 2,
+        "symptoms": null
+    }
+]
