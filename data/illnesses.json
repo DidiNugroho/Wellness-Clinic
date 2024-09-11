@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Demam",
+        "imageUrl": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1654487693/attached_image/demam-pada-anak.jpg",
+        "CategoryId": 2
+    },
+    {
+        "name": "Pilek",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbZqJlQ5nbSbyh1NaJmejjBAwuHoHBk0cI5A&s",
+        "CategoryId": 2
+    },
+    {
+        "name": "Kangker Darah",
+        "imageUrl": "https://p2ptm.kemkes.go.id/uploads//TmQwU05BQS9YYlJpanB5VnNtRldFUT09/1_Oktober_03.png",
+        "CategoryId": 3
+    },
+    {
+        "name": "kangker Hati",
+        "imageUrl": "https://media.suara.com/pictures/original/2019/03/26/93302-kanker-hati.jpg",
+        "CategoryId": 3
+    },
+    {
+        "name": "Vertigo",
+        "imageUrl": "https://mediaindonesia.com/cdn-cgi/image/width=800,quality=80/https://asset.mediaindonesia.com/news/2024/06/62562a87c1bfd011691b562ba470b0cb.jpg",
+        "CategoryId": 1
+    }
+]

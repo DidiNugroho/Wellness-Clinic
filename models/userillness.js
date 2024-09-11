@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   UserIllness.init({
     IllnessId: DataTypes.INTEGER,
-    UserId: DataTypes.INTEGER
+    UserId: DataTypes.INTEGER,
+    symptom: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'UserIllness',

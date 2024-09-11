@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Simmonds Lartice",
+        "email": "slartice0@usda.gov",
+        "password": "wT8/(uWnC5ka0",
+        "role": "Pasien"
+    },
+    {
+        "name": "Thomasina Crichten",
+        "email": "tcrichten1@wix.com",
+        "password": "jB9{(pZ<_Sn",
+        "role": "Dokter"
+    },
+    {
+        "name": "Sharona McFarlan",
+        "email": "smcfarlan2@wordpress.org",
+        "password": "rT2>*YfvdO>dEQ",
+        "role": "Pasien"
+    },
+    {
+        "name": "Roseline Ewbanks",
+        "email": "rewbanks3@t-online.de",
+        "password": "dF4#+E(dON1",
+        "role": "Pasien"
+    },
+    {
+        "name": "Coleman Baszniak",
+        "email": "cbaszniak4@devhub.com",
+        "password": "aM4?\"ueT",
+        "role": "Dokter"
+    }
+]

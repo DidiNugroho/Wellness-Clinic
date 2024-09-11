@@ -15,11 +15,11 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
+    await queryInterface.removeColumn('UserIllnesses');
     /**
      * Add reverting commands here.
      *
      * Example:
-     * await queryInterface.dropTable('users');
      */
   }
 };
