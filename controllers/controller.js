@@ -1,5 +1,5 @@
 const { Op } = require('sequelize');
-const { User, Profile, Category, Illness, UserIlness } = require('../models')
+const { User, Profile, Category, Illness, UserIllness } = require('../models')
 const bcrypt = require('bcryptjs')
 
 module.exports.home = async (req, res) => {  
@@ -29,15 +29,29 @@ module.exports.readDoctors = async (req, res) => {
 
 module.exports.readPatients = async (req, res) => {  
     try {  
-        let patients = await User.findAll({
-            where: {
-                role: 'Pasien'
-            },
-            include: {
+        const patients = await User.findAll({
+            where: { role: 'Pasien' }, // Filter only 'Pasien' role
+            include: [
+              {
                 model: Profile,
-                required:true
-            }
-        })
+                attributes: ['name', 'gender'], // Include user's name and gender from Profile
+              },
+              {
+                model: Illness,
+                through: {
+                  model: UserIllness,
+                  attributes: [], // No additional attributes needed from the join table
+                },
+                include: {
+                  model: Category,
+                  attributes: ['name'], // Include the name from Category
+                },
+                attributes: ['name', 'symptoms'], // Fetch illness name and symptoms
+              }
+            ],
+            attributes: ['id', 'createdAt'], // Optionally include User ID for internal use
+          });
+
         res.render('Patients', {patients})
     } catch (error) {  
         res.send(error.message)
@@ -76,9 +90,16 @@ module.exports.postAddIllness = async (req, res) => {
     }  
 };
 
-
-
-
+module.exports.deleteIllness = async (req, res) => { 
+    let { id } = req.params;
+    try {
+       const illnesses = await Illness.findByPk(id)
+       await illnesses.destroy()
+       res.redirect('/illnesses')
+    } catch (error) {
+       res.send(error.message) 
+    }
+};
 
 module.exports.getRegister = async (req, res) => {  
     try {  
@@ -162,3 +183,6 @@ module.exports.logOut = async (req, res) => {
         }
     })
 };
+
+
+
