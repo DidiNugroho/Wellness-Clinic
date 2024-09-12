@@ -8,6 +8,7 @@ module.exports.home = async (req, res) => {
 
 module.exports.getRegister = async (req, res) => {  
     try {  
+        let = await 
         res.render('RegisterForm')
     } catch (error) {  
         res.send(error.message)
