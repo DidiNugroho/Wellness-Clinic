@@ -12,9 +12,28 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Illness.belongsTo(models.Category)
-      Illness.belongsToMany(models.User, {through: models.UserIllness})
+      Illness.belongsToMany(models.User, { through: models.UserIllness })
     }
 
+    static async searchIllness(search) {
+      const searchCondition = search ? {
+        [Op.or]: [
+          { name: { [Op.iLike]: `%${search}%` } },
+          { '$Illness.symptoms$': { [Op.iLike]: `%${search}%` } }
+        ]
+      } : {};
+
+      let illnesses = await Illness.findAll({
+        include: {
+          model: Category
+        },
+        where: {
+          ...searchCondition
+        }
+      })
+
+      return illnesses
+    }
 
   }
   Illness.init({

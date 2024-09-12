@@ -84,21 +84,7 @@ module.exports.readPatients = async (req, res) => {
 module.exports.readIllnesses = async (req, res) => {
     let { search } = req.query  
     try {  
-        const searchCondition = search ? {
-            [Op.or]: [
-                { name: { [Op.iLike]: `%${search}%` } }, 
-                { '$Illness.symptoms$': { [Op.iLike]: `%${search}%` } } 
-            ]
-        } : {};
-
-        let illnesses = await Illness.findAll({
-            include: {
-                model: Category
-            },
-            where: {
-                ...searchCondition
-            }
-        })
+        let illnesses = await Illness.searchIllness(search)
         res.render('Illness', {illnesses})
     } catch (error) {  
         res.send(error.message)

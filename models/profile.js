@@ -14,12 +14,6 @@ module.exports = (sequelize, DataTypes) => {
       Profile.belongsTo(models.User)
     }
 
-    get registered() {
-      if (this.createdAt instanceof Date) {
-        return this.createdAt.toISOString().split('T')[0];
-      }
-      return 'Date not available';
-    }
   }
   Profile.init({
     name: DataTypes.STRING,
