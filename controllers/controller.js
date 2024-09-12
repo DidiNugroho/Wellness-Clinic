@@ -11,46 +11,67 @@ module.exports.home = async (req, res) => {
     }  
 };
 
-module.exports.readDoctors = async (req, res) => {  
-    try {  
+module.exports.readDoctors = async (req, res) => { 
+    let { search } = req.query; 
+    try { 
+        const searchCondition = search ? {
+            [Op.or]: [
+                { name: { [Op.iLike]: `%${search}%` } }, 
+                { '$Profile.specialization$': { [Op.iLike]: `%${search}%` } } 
+            ]
+        } : {};
+
         let doctors = await User.findAll({
             where: {
-                role: 'Dokter'
+                role: 'Dokter',
+                ...searchCondition // Apply search condition
             },
             include: {
                 model: Profile,
-                required:true
+                required: true
             }
-        })
-        res.render('Doctors', {doctors})
+        });
+        res.render('Doctors', { doctors });
     } catch (error) {  
-        res.send(error.message)
+        res.send(error.message);
     }  
 };
 
+
 module.exports.readPatients = async (req, res) => {  
-    try {  
+    let { search } = req.query
+    try { 
+        const searchCondition = search ? {
+            [Op.or]: [
+                { name: { [Op.iLike]: `%${search}%` } }, 
+                { '$Illnesses.name$': { [Op.iLike]: `%${search}%` } } 
+            ]
+        } : {};
+
         const patients = await User.findAll({
-            where: { role: 'Pasien' }, // Filter only 'Pasien' role
+            where: { 
+                role: 'Pasien', 
+                ...searchCondition
+            },
             include: [
               {
                 model: Profile,
-                attributes: ['name', 'gender'], // Include user's name and gender from Profile
+                attributes: ['name', 'gender']
               },
               {
                 model: Illness,
                 through: {
                   model: UserIllness,
-                  attributes: [], // No additional attributes needed from the join table
+                  attributes: []
                 },
                 include: {
                   model: Category,
-                  attributes: ['name'], // Include the name from Category
+                  attributes: ['name']
                 },
-                attributes: ['name', 'symptoms'], // Fetch illness name and symptoms
+                attributes: ['name', 'symptoms']
               }
             ],
-            attributes: ['id', 'createdAt'], // Optionally include User ID for internal use
+            attributes: ['id', 'createdAt']
           });
 
         res.render('Patients', {patients})
@@ -59,11 +80,22 @@ module.exports.readPatients = async (req, res) => {
     }  
 };
 
-module.exports.readIllnesses = async (req, res) => {  
+module.exports.readIllnesses = async (req, res) => {
+    let { search } = req.query  
     try {  
+        const searchCondition = search ? {
+            [Op.or]: [
+                { name: { [Op.iLike]: `%${search}%` } }, 
+                { '$Illness.symptoms$': { [Op.iLike]: `%${search}%` } } 
+            ]
+        } : {};
+
         let illnesses = await Illness.findAll({
             include: {
                 model: Category
+            },
+            where: {
+                ...searchCondition
             }
         })
         res.render('Illness', {illnesses})
@@ -97,6 +129,17 @@ module.exports.deleteIllness = async (req, res) => {
        const illnesses = await Illness.findByPk(id)
        await illnesses.destroy()
        res.redirect('/illnesses')
+    } catch (error) {
+       res.send(error.message) 
+    }
+};
+
+module.exports.deletePatient = async (req, res) => { 
+    let { id } = req.params;
+    try {
+       const users = await User.findByPk(id)
+       await users.destroy()
+       res.redirect('/patients')
     } catch (error) {
        res.send(error.message) 
     }

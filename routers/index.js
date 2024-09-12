@@ -1,10 +1,7 @@
 const router = require('express').Router()
 
-
-const { home, getRegister, postRegister, getLogin, postLogin, logOut, readDoctors, readPatients, readIllnesses, getAddIllness, postAddIllness,  deleteIllness } = require('../controllers/controller')
+const { home, getRegister, postRegister, getLogin, postLogin, logOut, readDoctors, readPatients, readIllnesses, getAddIllness, postAddIllness,  deleteIllness, deletePatient } = require('../controllers/controller')
 const { pasien, dokter, isLoggedIn } = require('../middleWare/autenthificaation')
-
-
 
 router.get('/', home)
 router.get('/register', getRegister)
@@ -30,6 +27,7 @@ router.post('/illnesses/add', dokter , postAddIllness)
 router.get('/illnesses/:id/edit')
 router.post('/illnesses/:id/edit')
 router.get('/illnesses/:id/delete', deleteIllness)
+router.get('/patients/:id/delete', deletePatient)
 
 
 module.exports = router;
