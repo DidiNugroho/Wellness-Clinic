@@ -14,11 +14,14 @@ module.exports = (sequelize, DataTypes) => {
       Illness.belongsTo(models.Category)
       Illness.belongsToMany(models.User, {through: models.UserIllness})
     }
+
+
   }
   Illness.init({
     name: DataTypes.STRING,
     imageURL: DataTypes.STRING,
-    CategoryId: DataTypes.INTEGER
+    CategoryId: DataTypes.INTEGER,
+    symptoms: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Illness',
