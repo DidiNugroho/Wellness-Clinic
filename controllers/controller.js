@@ -106,7 +106,6 @@ module.exports.readIllnesses = async (req, res) => {
 };
 
 module.exports.getAddIllness = async (req, res) => {  
-    let { errors } = req.query
     try {  
         const categories = await Category.findAll()
         res.render('AddIllnessForm', {categories, errors})
@@ -129,8 +128,8 @@ module.exports.postAddIllness = async (req, res) => {
 };
 
 module.exports.getEditIllness = async (req, res) => {  
-    let { id } = req.params;
     let { errors } = req.query
+    let { id } = req.params;
     try {  
         const illness = await Illness.findByPk(id, {
             include: {
@@ -188,9 +187,9 @@ module.exports.deletePatient = async (req, res) => {
 };
 
 module.exports.getRegister = async (req, res) => {  
+    let { errors } = req.query
     try {  
-        
-        res.render('RegisterForm')
+        res.render('RegisterForm', {errors})
     } catch (error) {  
         res.send(error.message)
     }  
@@ -220,9 +219,11 @@ module.exports.postRegister = async (req, res) => {
                 res.redirect('/register?error=register gagal')
             }
         }
-
     } catch (error) {  
-        res.send(error.message)
+        if (error.name == 'SequelizeValidationError') {
+            const errors = error.errors.map((e) => e.message).join(',');
+            return res.redirect('/register?errors=' + encodeURIComponent(errors));
+        }
     }  
 };
 
