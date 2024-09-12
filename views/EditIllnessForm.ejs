@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Illness</title>
+    <title>Edit Illness</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <%- include('partials/navbar') %>
     <div class="container mt-5">
-        <h2>Add New Illness</h2>
+        <h2>Edit Illness Information</h2>
         <% if (errors) { 
             const errorArray = decodeURIComponent(errors).split(',');
         %>
@@ -17,35 +17,33 @@
               <p style="color: red;"><%= e %></p>
             <% }) %>
         <% } %>
-        <form action="/illnesses/add" method="POST">
+        <form action="/illnesses/<%= illness.id %>/edit" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" value="<%= illness.name %>">
             </div>
             <div class="form-group">
                 <label for="imageURL">Image URL</label>
-                <input type="text" class="form-control" id="imageURL" name="imageURL">
+                <input type="text" class="form-control" id="imageURL" name="imageURL" value="<%= illness.imageURL %>">
             </div>
             <div class="form-group">
                 <label for="categoryId">Category</label>
-                <select class="form-control" id="categoryId" name="CategoryId">
-                    <!-- Replace these options with dynamic category options from your database -->
-                    <option>-- Select a category --</option>
-                    <% categories.forEach(e => { %>
-                        <option value="<%= e.id %>"><%= e.name %></option>
+                <select class="form-control" id="categoryId" name="categoryId">
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>" <%= illness.CategoryId === category.id ? 'selected' : '' %>><%= category.name %></option>
                     <% }) %>
-                </select>
+                </select>                
             </div>
             <div class="form-group">
                 <label for="symptoms">Symptoms</label>
-                <textarea class="form-control" id="symptoms" name="symptoms" rows="3"></textarea>
+                <textarea class="form-control" id="symptoms" name="symptoms" rows="3"><%= illness.symptoms %></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Add Illness</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -18,9 +18,33 @@ module.exports = (sequelize, DataTypes) => {
 
   }
   Illness.init({
-    name: DataTypes.STRING,
-    imageURL: DataTypes.STRING,
-    CategoryId: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: 'nama penyakit harus diisi!'
+        }
+      }
+    },
+    imageURL: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: 'Username harus diisi!'
+        },
+        isUrl: {
+          msg: 'Url harus valid!'
+        }
+      }
+    },
+    CategoryId: {
+      type: DataTypes.INTEGER,
+      validate: {
+        notEmpty: {
+          msg: 'Harus pilih kategori!'
+        }
+      }
+    },
     symptoms: DataTypes.STRING
   }, {
     sequelize,
