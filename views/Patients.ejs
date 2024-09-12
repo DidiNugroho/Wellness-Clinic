@@ -16,7 +16,6 @@
                     <th>Name</th>
                     <th>Gender</th>
                     <th>Illness</th>
-                    <th>Symptoms</th>
                     <th>Category</th>
                     <th>Registered</th>
                     <th>Action</th>
@@ -29,7 +28,6 @@
                     <td><%= patient.Profile.name %></td>
                     <td><%= patient.Profile.gender %></td>
                     <td><%= patient.Illnesses[0].name %></td>
-                    <td><%= patient.Illnesses[0].symptoms %></td> <!-- Display symptoms here -->
                     <td><%= patient.Illnesses[0].Category.name %></td>
                     <td><%= patient.formattedCreatedAt %></td>
                         <td><a href=""><button>Delete</button></a></td>
