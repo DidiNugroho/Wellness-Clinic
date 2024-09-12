@@ -12,6 +12,10 @@
     <div class="container mt-4">
         <h1 class="mb-4">Illness List</h1>
         <a href="/illnesses/add"><button>Add Illness</button></a><br><br>
+        <form method="get" action="/illnesses">
+            <input type="text" name="search" id="search-input" placeholder="Search by name or symptoms">
+            <button type="submit">Search</button>
+        </form> <br>
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
