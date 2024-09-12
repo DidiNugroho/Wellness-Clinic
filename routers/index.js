@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const { home, getRegister, postRegister, getLogin, postLogin, logOut, readDoctors, readPatients, readIllnesses, getAddIllness, postAddIllness,  deleteIllness, deletePatient } = require('../controllers/controller')
+const { home, getRegister, postRegister, getLogin, postLogin, logOut, readDoctors, readPatients, readIllnesses, getAddIllness, postAddIllness,  deleteIllness, deletePatient, getEditIllness, postEditIllness } = require('../controllers/controller')
 const { pasien, dokter, isLoggedIn } = require('../middleWare/autenthificaation')
 
 router.get('/', home)
@@ -24,10 +24,10 @@ router.get('/patients', dokter, readPatients)
 router.get('/illnesses', dokter , readIllnesses)
 router.get('/illnesses/add', dokter , getAddIllness)
 router.post('/illnesses/add', dokter , postAddIllness)
-router.get('/illnesses/:id/edit')
-router.post('/illnesses/:id/edit')
-router.get('/illnesses/:id/delete', deleteIllness)
-router.get('/patients/:id/delete', deletePatient)
+router.get('/illnesses/:id/edit', dokter, getEditIllness)
+router.post('/illnesses/:id/edit', dokter, postEditIllness)
+router.get('/illnesses/:id/delete', dokter, deleteIllness)
+router.get('/patients/:id/delete', dokter, deletePatient)
 
 
 module.exports = router;
