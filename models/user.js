@@ -16,6 +16,12 @@ module.exports = (sequelize, DataTypes) => {
       User.hasOne(models.Profile)
       User.belongsToMany(models.Illness, { through: models.UserIllness });
     }
+
+    get formattedCreatedAt() {
+      // Format createdAt as 'YYYY-MM-DD HH:mm:ss' (or any format you prefer)
+      return this.createdAt ? this.createdAt.toISOString().replace('T', ' ').substring(0, 19) : null;
+    }
+    
   }
   User.init({
     name: DataTypes.STRING,
