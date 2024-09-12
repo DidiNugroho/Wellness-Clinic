@@ -1,7 +1,8 @@
 
-const { Op } = require('sequelize');
+const { Op, where } = require('sequelize');
 const { User, Profile, Category, Illness, UserIllness } = require('../models')
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const illness = require('../models/illness');
 
 module.exports.home = async (req, res) => {  
     try {  
@@ -105,9 +106,10 @@ module.exports.readIllnesses = async (req, res) => {
 };
 
 module.exports.getAddIllness = async (req, res) => {  
+    let { errors } = req.query
     try {  
         const categories = await Category.findAll()
-        res.render('AddIllnessForm', {categories})
+        res.render('AddIllnessForm', {categories, errors})
     } catch (error) {  
         res.send(error.message)
     }  
@@ -119,7 +121,47 @@ module.exports.postAddIllness = async (req, res) => {
         await Illness.create({name, imageURL, CategoryId, symptoms})
         res.redirect('/illnesses')
     } catch (error) {  
+        if (error.name == 'SequelizeValidationError') {
+            const errors = error.errors.map((e) => e.message).join(',');
+            return res.redirect('/illnesses/add?errors=' + encodeURIComponent(errors));
+        }
+    }  
+};
+
+module.exports.getEditIllness = async (req, res) => {  
+    let { id } = req.params;
+    let { errors } = req.query
+    try {  
+        const illness = await Illness.findByPk(id, {
+            include: {
+                model: Category,
+                attributes: ['name'] // Fetch only the name of the category
+            }
+        });
+        const categories = await Category.findAll();
+        res.render('EditIllnessForm', {illness, categories, errors})
+    } catch (error) {  
         res.send(error.message)
+    }  
+};
+
+module.exports.postEditIllness = async (req, res) => { 
+    let { id } = req.params
+    let {name, imageURL, CategoryId, symptoms} = req.body 
+    try {  
+        const illness = await Illness.findByPk(id, {
+            include: {
+                model: Category,
+                attributes: ['name'] // Fetch only the name of the category
+            }
+        });
+        await illness.update({name, imageURL, CategoryId, symptoms})
+        res.redirect('/illnesses')
+    } catch (error) {  
+        if (error.name == 'SequelizeValidationError') {
+            const errors = error.errors.map((e) => e.message).join(',');
+            return res.redirect(`/illnesses/${id}/edit?errors=` + encodeURIComponent(errors));
+        }
     }  
 };
 
