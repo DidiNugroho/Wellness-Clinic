@@ -1,5 +1,5 @@
 
-const { Op, where } = require('sequelize');
+const { Op } = require('sequelize');
 const { User, Profile, Category, Illness, UserIllness } = require('../models')
 const bcrypt = require('bcryptjs');
 const illness = require('../models/illness');
@@ -106,6 +106,7 @@ module.exports.readIllnesses = async (req, res) => {
 };
 
 module.exports.getAddIllness = async (req, res) => {  
+    const { errors } = req.query
     try {  
         const categories = await Category.findAll()
         res.render('AddIllnessForm', {categories, errors})
