@@ -1,4 +1,3 @@
-=======
 const { Op } = require('sequelize');
 const { User, Profile, Category, Illness, UserIlness } = require('../models')
 const bcrypt = require('bcryptjs')

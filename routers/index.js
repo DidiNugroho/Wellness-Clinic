@@ -1,6 +1,6 @@
 const router = require('express').Router()
-=======
-const { home, getRegister, postRegister, getLogin, postLogin, logOut, getRegister, postRegister, readDoctors, readPatients, readIllnesses, getAddIllness, postAddIllness } = require('../controllers/controller')
+
+const { home, getLogin, postLogin, logOut, getRegister, postRegister, readDoctors, readPatients, readIllnesses, getAddIllness, postAddIllness } = require('../controllers/controller')
 
 router.get('/', home)
 router.get('/register', getRegister)
@@ -16,6 +16,6 @@ router.post('/illnesses/add', postAddIllness)
 router.get('/illnesses/:id/edit')
 router.post('/illnesses/:id/edit')
 router.get('/illnesses/:id/delete')
-=======
+
 
 module.exports = router;
