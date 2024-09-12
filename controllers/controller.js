@@ -1,3 +1,4 @@
+
 const { Op } = require('sequelize');
 const { User, Profile, Category, Illness, UserIllness } = require('../models')
 const bcrypt = require('bcryptjs')
@@ -192,28 +193,36 @@ module.exports.getLogin = async (req, res) => {
     }  
 };
 
-module.exports.postLogin = async (req, res) => { 
-     let { email, password } = req.body
-    try {  
+module.exports.postLogin = async (req, res) => {
+    let { email, password } = req.body
+    try {
         let user = await User.findOne({
             where: {
                 email
             }
         })
-        req.session.userId = user.id;
+
         if (user) {
             const isValidPass = bcrypt.compareSync(password, user.password)
             if (isValidPass) {
-                return res.redirect('/')
+                req.session.userId = user.id;
+                req.session.userRole = user.role;
+
+                // Menggunakan returnTo jika ada, jika tidak kembali ke homepage
+                const returnTo = req.session.returnTo || '/';
+                delete req.session.returnTo; // Hapus returnTo dari session setelah digunakan
+
+                return res.redirect(returnTo);
             } else {
-                return res.redirect(`/login?error=invalid email/password`)
+                return res.redirect(`/login?error=Invalid email/password`);
             }
         } else {
-            return res.redirect(`/login?error=user not found`)
+            return res.redirect(`/login?error=User not found`);
         }
-    } catch (error) {  
-        res.send(error.message)
-    }  
+    } catch (error) {
+        console.error('Login error:', error);
+        res.redirect('/login?error=An error occurred during login');
+    }
 };
 
 module.exports.logOut = async (req, res) => { 
