@@ -265,6 +265,3 @@ module.exports.logOut = async (req, res) => {
         }
     })
 };
-
-
-
