@@ -1,3 +1,5 @@
+const { User } = require('../models')
+
 module.exports.home = async (req, res) => {  
     try {  
         res.render('Home')
@@ -8,8 +10,16 @@ module.exports.home = async (req, res) => {
 
 module.exports.getRegister = async (req, res) => {  
     try {  
-        let = await 
         res.render('RegisterForm')
+    } catch (error) {  
+        res.send(error.message)
+    }  
+};
+
+module.exports.postRegister = async (req, res) => {  
+    try {  
+        const hashedPassword = 
+        res.redirect('/')
     } catch (error) {  
         res.send(error.message)
     }  

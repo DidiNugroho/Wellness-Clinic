@@ -1,14 +1,15 @@
 [
     {
-        "name": "Migrain",
-        "description": "Gejala utama migrain adalah nyeri kepala hebat di salah satu sisi kepala. Nyeri yang dirasakan umumnya nyeri berdenyut dengan intensitas sedang hingga berat yang makin terasa ketika bergerak, melihat cahaya terang, atau mendengar suara bising."
+      "name": "Low Risk",
+      "description": "Illnesses that are generally non-threatening and can be treated with minimal medical intervention. These illnesses typically do not pose a serious danger to a person's health."
     },
     {
-        "name": "Influenza",
-        "description": "Flu atau influenza merupakan penyakit yang disebabkan oleh infeksi virus yang dapat menyerang hidung, tenggorokan, dan paru-paru."
+      "name": "Medium Risk",
+      "description": "Illnesses that may require medical intervention and can pose moderate danger if not treated. These conditions can impact daily life but are not immediately life-threatening."
     },
     {
-        "name": "Kangker",
-        "description": "Kanker merupakan penyebab kematian kedua terbanyak di seluruh dunia. Kanker sering menyebabkan kematian, karena penyakit ini umumnya tidak menimbulkan gejala pada awal perkembangannya. Akibatnya, kondisi ini baru terdeteksi dan ditangani setelah mencapai stadium lanjut."
+      "name": "High Risk",
+      "description": "Illnesses that can be life-threatening and require urgent medical care. These conditions pose a severe danger to a person's health and can have serious long-term effects."
     }
-]
+  ]
+  
