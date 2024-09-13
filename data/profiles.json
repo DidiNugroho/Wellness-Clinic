@@ -1,27 +1,108 @@
 [
     {
-        "name": null,
-        "gender": "Male",
-        "UserId": 3
+      "name": "Pincas Thring",
+      "gender": "Male",
+      "specialization": null,
+      "contact": "pthring0@tinypic.com",
+      "UserId": 1
     },
     {
-        "name": null,
-        "gender": "Male",
-        "UserId": 2
+      "name": "Gus Fincher",
+      "gender": "Male",
+      "specialization": null,
+      "contact": "gfincher1@wired.com",
+      "UserId": 2
     },
     {
-        "name": null,
-        "gender": "Male",
-        "UserId": 4
+      "name": "Alfy Plait",
+      "gender": "Male",
+      "specialization": "Cardiology",
+      "contact": "aplait2@gmpg.org",
+      "UserId": 3
     },
     {
-        "name": null,
-        "gender": "Male",
-        "UserId": 1
+      "name": "Luciano Tubridy",
+      "gender": "Male",
+      "specialization": "Dermatology",
+      "contact": "ltubridy3@sun.com",
+      "UserId": 4
     },
     {
-        "name": null,
-        "gender": "Female",
-        "UserId": 5
+      "name": "Chancey Children",
+      "gender": "Male",
+      "specialization": "Orthopedics",
+      "contact": "cchildren4@wunderground.com",
+      "UserId": 5
+    },
+    {
+      "name": "Cristie Jenicek",
+      "gender": "Female",
+      "specialization": null,
+      "contact": "cjenicek5@bandcamp.com",
+      "UserId": 6
+    },
+    {
+      "name": "Sonny Trattles",
+      "gender": "Male",
+      "specialization": "Pediatrics",
+      "contact": "strattles6@wikispaces.com",
+      "UserId": 7
+    },
+    {
+      "name": "Bryn Crohan",
+      "gender": "Male",
+      "specialization": "Neurology",
+      "contact": "bcrohan7@umn.edu",
+      "UserId": 8
+    },
+    {
+      "name": "Addy Bridson",
+      "gender": "Female",
+      "specialization": "General Surgery",
+      "contact": "abridson8@wikia.com",
+      "UserId": 9
+    },
+    {
+      "name": "Haleigh Dilnot",
+      "gender": "Female",
+      "specialization": "Radiology",
+      "contact": "hdilnot9@topsy.com",
+      "UserId": 10
+    },
+    {
+      "name": "Ally Buessen",
+      "gender": "Female",
+      "specialization": "Anesthesiology",
+      "contact": "abuessena@globo.com",
+      "UserId": 11
+    },
+    {
+      "name": "Crosby Garvie",
+      "gender": "Male",
+      "specialization": "Ophthalmology",
+      "contact": "cgarvieb@issuu.com",
+      "UserId": 12
+    },
+    {
+      "name": "Hersch Vauter",
+      "gender": "Male",
+      "specialization": "Urology",
+      "contact": "hvauterc@dedecms.com",
+      "UserId": 13
+    },
+    {
+      "name": "Kaylil Bortolussi",
+      "gender": "Female",
+      "specialization": "Endocrinology",
+      "contact": "kbortolussid@comcast.net",
+      "UserId": 14
+    },
+    {
+      "name": "Gracia Cockett",
+      "gender": "Female",
+      "specialization": null,
+      "contact": "gcockette@addtoany.com",
+      "UserId": 15
     }
-]
+  ]
+  

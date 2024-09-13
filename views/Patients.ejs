@@ -53,6 +53,7 @@
                         </td>
                         <td><%= patient.formattedCreatedAt %></td>
                         <td>
+                            <a href="/patients/<%= patient.id %>/edit" class="btn btn-warning btn-sm">Edit</a>
                             <a href="/patients/<%= patient.id %>/delete" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>

@@ -1,32 +1,78 @@
 [
     {
-        "name": "Simmonds Lartice",
-        "email": "slartice0@usda.gov",
-        "password": "wT8/(uWnC5ka0",
-        "role": "Pasien"
-    },
-    {
-        "name": "Thomasina Crichten",
-        "email": "tcrichten1@wix.com",
-        "password": "jB9{(pZ<_Sn",
-        "role": "Dokter"
-    },
-    {
-        "name": "Sharona McFarlan",
-        "email": "smcfarlan2@wordpress.org",
-        "password": "rT2>*YfvdO>dEQ",
-        "role": "Pasien"
-    },
-    {
-        "name": "Roseline Ewbanks",
-        "email": "rewbanks3@t-online.de",
-        "password": "dF4#+E(dON1",
-        "role": "Pasien"
-    },
-    {
-        "name": "Coleman Baszniak",
-        "email": "cbaszniak4@devhub.com",
-        "password": "aM4?\"ueT",
-        "role": "Dokter"
-    }
+    "name": "Pincas Thring",
+    "email": "pthring0@tinypic.com",
+    "password": "$2a$04$oAGEg89gEDa0OZg6ny02beGm9nlYwB8DFAW1T3/n8fc/aS4NfkZAm",
+    "role": "Pasien"
+  }, {
+    "name": "Gus Fincher",
+    "email": "gfincher1@wired.com",
+    "password": "$2a$04$U5QK3yz1jRkEVWvUL.mPQuPfGX.BscREI.quDKoCCmIm15Yl0H4TO",
+    "role": "Pasien"
+  }, {
+    "name": "Alfy Plait",
+    "email": "aplait2@gmpg.org",
+    "password": "$2a$04$YJxwKaXq9iQKxbe7x33kXe3JCVBaTBcSlMmwWU.IhRkpJsMyTaNAq",
+    "role": "Dokter"
+  }, {
+    "name": "Luciano Tubridy",
+    "email": "ltubridy3@sun.com",
+    "password": "$2a$04$iaHb6dDBi2Flq19PctESquaaQdw3KTEHPFe.ShF3j9uCILIDhuZLW",
+    "role": "Dokter"
+  }, {
+    "name": "Chancey Children",
+    "email": "cchildren4@wunderground.com",
+    "password": "$2a$04$sBrjtqCvMQAtP23wrW4oK.EmYBtC6erg568mY5PI0THrnlRvvOQS6",
+    "role": "Dokter"
+  }, {
+    "name": "Cristie Jenicek",
+    "email": "cjenicek5@bandcamp.com",
+    "password": "$2a$04$PXgK7df0esbqHVA.smJqzO9n1r/D3DdsY/iTJhWnJ2CkbN8gUXjo.",
+    "role": "Pasien"
+  }, {
+    "name": "Sonny Trattles",
+    "email": "strattles6@wikispaces.com",
+    "password": "$2a$04$ymXiCHGe9BUqN3Kr77uCcePgn1hzJf1FMx87zRXXgWglN4OZ7MxJy",
+    "role": "Dokter"
+  }, {
+    "name": "Bryn Crohan",
+    "email": "bcrohan7@umn.edu",
+    "password": "$2a$04$IzwI6dhSOYW7uayOq1LDcul4Ah3STdgd8JZDatFV8Ms43yw3TPUoG",
+    "role": "Dokter"
+  }, {
+    "name": "Addy Bridson",
+    "email": "abridson8@wikia.com",
+    "password": "$2a$04$M3YEhuwjVx7wyZ3TOI1ZJOFC9yoW0n2yJNcPY8cIhvEsPdHt7jv02",
+    "role": "Dokter"
+  }, {
+    "name": "Haleigh Dilnot",
+    "email": "hdilnot9@topsy.com",
+    "password": "$2a$04$u8B8X5rN28muH6BDPU1zquDpt3Z0IWOdtuPgdFd.lUbv7pbaUvLY.",
+    "role": "Dokter"
+  }, {
+    "name": "Ally Buessen",
+    "email": "abuessena@globo.com",
+    "password": "$2a$04$5rEMyz7sGntPbRR4VVxTnez/FpTnDArKIldjFciqq1bEHEm6afMLC",
+    "role": "Dokter"
+  }, {
+    "name": "Crosby Garvie",
+    "email": "cgarvieb@issuu.com",
+    "password": "$2a$04$eQZ/5K8PF1cWXOIHcqvp/..pr7vKl5SwF4jgvlDfiHNoR0wKHylHu",
+    "role": "Dokter"
+  }, {
+    "name": "Hersch Vauter",
+    "email": "hvauterc@dedecms.com",
+    "password": "$2a$04$0y3NOOkTP4.Y7nmUfz2xFutWs0UcC4v8ciSp2qdqw05YfW.bjPKdy",
+    "role": "Dokter"
+  }, {
+    "name": "Kaylil Bortolussi",
+    "email": "kbortolussid@comcast.net",
+    "password": "$2a$04$kzyskfhADfys6WUOzJesnOkKw.YmLO5BsHscwSNclhK3hs.oKt5Y2",
+    "role": "Dokter"
+  }, {
+    "name": "Gracia Cockett",
+    "email": "gcockette@addtoany.com",
+    "password": "$2a$04$7.U3WbPKc1R9TNZahmrvyuA7NrcMQHf9Say/1JwIihyQyR60Jpu4G",
+    "role": "Pasien"
+  }
 ]
