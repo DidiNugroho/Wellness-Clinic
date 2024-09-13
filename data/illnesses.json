@@ -1,27 +1,75 @@
 [
     {
-        "name": "Demam",
-        "imageURL": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1654487693/attached_image/demam-pada-anak.jpg",
-        "CategoryId": 2
+      "name": "Common Cold",
+      "imageURL": "https://example.com/cold.jpg",
+      "CategoryId": 1,
+      "symptoms": "Runny nose, Sore throat, Cough, Mild fever"
     },
     {
-        "name": "Pilek",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbZqJlQ5nbSbyh1NaJmejjBAwuHoHBk0cI5A&s",
-        "CategoryId": 2
+      "name": "Fractured Arm",
+      "imageURL": "https://example.com/fractured_arm.jpg",
+      "CategoryId": 2,
+      "symptoms": "Severe pain, Swelling, Bruising, Inability to move arm"
     },
     {
-        "name": "Kangker Darah",
-        "imageURL": "https://p2ptm.kemkes.go.id/uploads//TmQwU05BQS9YYlJpanB5VnNtRldFUT09/1_Oktober_03.png",
-        "CategoryId": 3
+      "name": "Heart Attack",
+      "imageURL": "https://example.com/heart_attack.jpg",
+      "CategoryId": 3,
+      "symptoms": "Chest pain, Shortness of breath, Sweating, Nausea"
     },
     {
-        "name": "kangker Hati",
-        "imageURL": "https://media.suara.com/pictures/original/2019/03/26/93302-kanker-hati.jpg",
-        "CategoryId": 3
+      "name": "Eczema",
+      "imageURL": "https://example.com/eczema.jpg",
+      "CategoryId": 1,
+      "symptoms": "Itchy skin, Dry patches, Redness, Inflammation"
     },
     {
-        "name": "Vertigo",
-        "imageURL": "https://mediaindonesia.com/cdn-cgi/image/width=800,quality=80/https://asset.mediaindonesia.com/news/2024/06/62562a87c1bfd011691b562ba470b0cb.jpg",
-        "CategoryId": 1
+      "name": "Pneumonia",
+      "imageURL": "https://example.com/pneumonia.jpg",
+      "CategoryId": 2,
+      "symptoms": "Cough with phlegm, Fever, Chills, Shortness of breath"
+    },
+    {
+      "name": "Brain Tumor",
+      "imageURL": "https://example.com/brain_tumor.jpg",
+      "CategoryId": 3,
+      "symptoms": "Severe headache, Seizures, Vision problems, Memory loss"
+    },
+    {
+      "name": "Diabetes Mellitus",
+      "imageURL": "https://example.com/diabetes.jpg",
+      "CategoryId": 2,
+      "symptoms": "Frequent urination, Increased thirst, Fatigue, Blurred vision"
+    },
+    {
+      "name": "Asthma",
+      "imageURL": "https://example.com/asthma.jpg",
+      "CategoryId": 2,
+      "symptoms": "Shortness of breath, Wheezing, Chest tightness, Cough"
+    },
+    {
+      "name": "Cataracts",
+      "imageURL": "https://example.com/cataracts.jpg",
+      "CategoryId": 2,
+      "symptoms": "Blurred vision, Difficulty seeing at night, Faded colors, Sensitivity to light"
+    },
+    {
+      "name": "Kidney Stones",
+      "imageURL": "https://example.com/kidney_stones.jpg",
+      "CategoryId": 2,
+      "symptoms": "Severe back pain, Nausea, Blood in urine, Painful urination"
+    },
+    {
+      "name": "Thyroid Disease",
+      "imageURL": "https://example.com/thyroid.jpg",
+      "CategoryId": 2,
+      "symptoms": "Fatigue, Weight gain, Hair loss, Irregular heartbeat"
+    },
+    {
+      "name": "Appendicitis",
+      "imageURL": "https://example.com/appendicitis.jpg",
+      "CategoryId": 3,
+      "symptoms": "Severe abdominal pain, Nausea, Fever, Loss of appetite"
     }
-]
+  ]
+  

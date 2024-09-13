@@ -1,30 +1,51 @@
 [
     {
-        "IllnessId": 2,
-        "UserId": 1
+      "IllnessId": 2,
+      "UserId": 1
     },
     {
-        "IllnessId": 1,
-        "UserId": 3
+      "IllnessId": 1,
+      "UserId": 3
     },
     {
-        "IllnessId": 3,
-        "UserId": 4
+      "IllnessId": 3,
+      "UserId": 4
     },
     {
-        "IllnessId": 1,
-        "UserId": 2
+      "IllnessId": 1,
+      "UserId": 2
     },
     {
-        "IllnessId": 5,
-        "UserId": 5
+      "IllnessId": 5,
+      "UserId": 5
     },
     {
-        "IllnessId": 4,
-        "UserId": 1
+      "IllnessId": 4,
+      "UserId": 1
     },
     {
-        "IllnessId": 4,
-        "UserId": 2
+      "IllnessId": 4,
+      "UserId": 2
+    },
+    {
+      "IllnessId": 2,
+      "UserId": 6
+    },
+    {
+      "IllnessId": 1,
+      "UserId": 6
+    },
+    {
+      "IllnessId": 7,
+      "UserId": 15
+    },
+    {
+      "IllnessId": 8,
+      "UserId": 15
+    },
+    {
+      "IllnessId": 5,
+      "UserId": 15
     }
-]
+  ]
+  

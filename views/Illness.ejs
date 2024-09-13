@@ -15,6 +15,7 @@
         <table class="table table-hover table-bordered text-center">
             <thead class="thead-dark bg-dark text-white">
                 <tr>
+                    <th>Image</th>
                     <th>Illness</th>
                     <th>Category</th>
                     <th>Symptoms</th>
@@ -24,16 +25,18 @@
             <tbody>
                 <% illnesses.forEach(e => { %>
                     <tr>
-                        <td><%= e.name %></td>
-                        <td><%= e.Category.name %></td>
-                        <td><%= e.symptoms %></td>
-                        <td>
+                        <td class="align-middle"><img src="<%= e.imageURL %>" alt="" class="img-fluid" style="max-width: 150px;"></td>
+                        <td class="align-middle"><%= e.name %></td>
+                        <td class="align-middle"><%= e.Category.name %></td>
+                        <td class="align-middle"><%= e.symptoms %></td>
+                        <td class="align-middle">
                             <a href="/illnesses/<%= e.id %>/edit" class="btn btn-warning btn-sm">Edit</a>
                             <a href="/illnesses/<%= e.id %>/delete" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                 <% }) %>
             </tbody>
+            
         </table>
     </div>
 
