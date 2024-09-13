@@ -1,4 +1,5 @@
 'use strict';
+const { Op } = require('sequelize');
 const {
   Model
 } = require('sequelize');
@@ -25,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
 
       let illnesses = await Illness.findAll({
         include: {
-          model: Category
+          model: sequelize.models.Category
         },
         where: {
           ...searchCondition

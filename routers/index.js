@@ -1,7 +1,14 @@
 const router = require('express').Router()
 
 const { home, getRegister, postRegister, getLogin, postLogin, logOut, readDoctors, readPatients, readIllnesses, getAddIllness, postAddIllness,  deleteIllness, deletePatient, getEditIllness, postEditIllness } = require('../controllers/controller')
-const { pasien, dokter, isLoggedIn } = require('../middleWare/autenthificaation')
+const { pasien, dokter, isLoggedIn } = require('../helper/helperMidelware')
+const {signup, getBill} = require('../MVP/mailer')
+
+
+// mailer
+router.post('/user/signup', signup) 
+router.post('/user/getBill', getBill) 
+
 
 router.get('/', home)
 router.get('/register', getRegister)

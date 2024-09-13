@@ -4,6 +4,8 @@ const port = 3000
 const session = require('express-session')
 const router = require('./routers/index')
 
+
+
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: true}))
 app.use(session({
@@ -15,6 +17,10 @@ app.use(session({
     sameSite: true
    }
 }))
+
+app.use(express.json())
+
+app.use('/api', router)
 
 app.use(router)
 
