@@ -26,7 +26,9 @@ module.exports = (sequelize, DataTypes) => {
 
       let illnesses = await Illness.findAll({
         include: {
+
           model: sequelize.models.Category
+
         },
         where: {
           ...searchCondition
