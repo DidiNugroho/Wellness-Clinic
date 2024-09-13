@@ -19,7 +19,8 @@ const pasien = function(req, res, next) {
         return res.redirect('/login');
     }
     
-    return res.status(403).send("Unauthorized: Akses hanya untuk Pasien");
+
+    return  res.status(403).send("Unauthorized: Akses hanya untuk Pasien");
 };
 
 const dokter = function(req, res, next) {
